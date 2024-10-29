@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCare Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="form-container">
+        <h2 id="form-title">Register</h2>
+        <form id="user-form" onsubmit="handleAuth(event)"> <!-- Added onsubmit handler -->
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button id="submit-btn" type="submit">Register</button> <!-- Changed to type="submit" -->
+        </form>
+        <p id="toggle-text">Already have an account? <span onclick="toggleForm()">Login</span></p>
+    </div>
+    
+    <div id="welcome-message" style="display:none;">
+        <h2>Welcome!</h2>
+        <button onclick="logout()">Logout</button>
+    </div>
+    
+    <div>
+        <h2>User List</h2>
+        <ul id="user-list"></ul>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
